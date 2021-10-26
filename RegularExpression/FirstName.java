@@ -38,7 +38,10 @@ public class FirstName {
 				System.out.println("Validation for mobile number :" + Pattern.matches(REGEX_MOBILE_NO, mobileNumber));
 				break;
 			case 5:
-				final String REGEX_PASSWORD = "^([a-zA-Z0-9!@#$%^&*_-]{8,})(?=.*[A-Z])";
+				final String REGEX_PASSWORD = "^(?=.*[0-9])"
+						+ "+(?=.*[a-z])(?=.*[A-Z])"
+						+ "+(?=.*[@#$%^&+=])"
+						+ "+(?=\\S+$).{8,}$";
 				System.out.println("Enter Password");
 				String passWord = scanner.nextLine();
 				System.out.println("Validation for password :" + Pattern.matches(REGEX_PASSWORD, passWord));
