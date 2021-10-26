@@ -8,7 +8,8 @@ public class FirstName {
 		boolean check = true;
 		while (check) {
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("Enter Your Choice for validate\n 1.FirstName\n 2.LastName\n 3.Email\n 4.exit");
+			System.out.println(
+					"Enter Your Choice for validate\n 1.FirstName\n 2.LastName\n 3.Email\n 4.MobileNumber\n 5.exit");
 			int choice = scanner.nextInt();
 			scanner.nextLine();
 			switch (choice) {
@@ -31,11 +32,15 @@ public class FirstName {
 				System.out.println("Validation for email :" + Pattern.matches(REGEX_EMAIL, mail));
 				break;
 			case 4:
+				final String REGEX_MOBILE_NO = "^(\\d{2})( )([6-9]{1})(\\d{9})";
+				System.out.println("Enter MobileNumber");
+				String mobileNumber = scanner.nextLine();
+				System.out.println("Validation for mobile number :" + Pattern.matches(REGEX_MOBILE_NO, mobileNumber));
+				break;
+			case 5:
 				check = false;
 				break;
 			}
 		}
 	}
-}
-		
-		
+}		
