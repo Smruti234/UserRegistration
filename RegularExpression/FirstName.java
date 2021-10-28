@@ -3,7 +3,7 @@ package RegularExpression;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class FirstName {
+public class UserDetails {
 	boolean check = true;
 	while (check) {
 		Scanner scanner = new Scanner(System.in);
